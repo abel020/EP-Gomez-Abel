@@ -4,9 +4,9 @@ def PedirContraseña(medidor):
     Contraseña = input("Contraseña: ")
     
     GetUsuario = open("login.txt", 'rt', encoding='utf-8')
-    GetUsuario1 = GetUsuario.read()
+    GetUsuario1 = GetUsuario.read().splitlines()
     GetContraseña = open("clave.txt", 'rt', encoding='utf-8')
-    GetContraseña2 = GetContraseña.read()
+    GetContraseña2 = GetContraseña.read().splitlines()
     
     if Usuario in GetUsuario1 and Contraseña in GetContraseña2:
         print("Bienvenido!")
